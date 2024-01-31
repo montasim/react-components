@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 function BasicInputComponent({
      customClass,
      inputType,
+     inputPlaceholder,
      inputName,
      inputId,
      inputValue,
@@ -13,6 +14,7 @@ function BasicInputComponent({
         <input
             className={customClass}
             type={inputType}
+            placeholder={inputPlaceholder}
             name={inputName}
             id={inputId}
             value={inputValue}
@@ -24,7 +26,8 @@ function BasicInputComponent({
 
 BasicInputComponent.propTypes = {
     customClass: PropTypes.string,
-    inputType: PropTypes.oneOf(['text', 'password', 'email', 'number']), // Adjust the allowed input types as needed
+    inputType: PropTypes.oneOf(['text', 'password', 'email', 'number', 'search']), // Adjust the allowed input types as needed
+    inputPlaceholder: PropTypes.string,
     inputName: PropTypes.string.isRequired,
     inputId: PropTypes.string.isRequired,
     inputValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
