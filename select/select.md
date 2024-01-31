@@ -11,6 +11,8 @@ This folder contains various designs and styles of select components, each suite
 ## Select
 
 ```jsx
+const priorityOptions = ["", "Low", "Medium", "High"];
+
 <BasicSelectComponent
     customClass="block w-full cursor-pointer rounded-md bg-[#2D323F] px-3 py-2.5"
     inputName="priority"
