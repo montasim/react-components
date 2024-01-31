@@ -5,7 +5,7 @@ This folder contains various designs and styles of textarea components, each sui
 
 ## Contents
 
-1. [Basic Textarea](./BasicInputComponent.jsx)
+1. [Basic Textarea](./BasicTextareaComponent.jsx)
 
 
 ## Textarea 
