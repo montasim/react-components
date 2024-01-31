@@ -27,8 +27,7 @@ BasicInputComponent.propTypes = {
     inputType: PropTypes.oneOf(['text', 'password', 'email', 'number']), // Adjust the allowed input types as needed
     inputName: PropTypes.string.isRequired,
     inputId: PropTypes.string.isRequired,
-    inputValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-        .isRequired,
+    inputValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     handleInputChange: PropTypes.func.isRequired,
     isInputRequired: PropTypes.bool,
 };
