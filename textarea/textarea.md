@@ -11,7 +11,7 @@ This folder contains various designs and styles of textarea components, each sui
 ## Textarea 
 
 ```jsx
-<TextareaComponent
+<BasicTextareaComponent
     customClass="block min-h-[120px] w-full rounded-md bg-[#2D323F] px-3 py-2.5 lg:min-h-[180px]"
     inputName="description"
     inputId="description"
