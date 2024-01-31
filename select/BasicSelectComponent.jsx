@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 
 function BasicSelectComponent({
-                             customClass,
-                             inputName,
-                             inputId,
-                             inputValue,
-                             options,
-                             onChange,
-                             isRequired,
-                         }) {
+ customClass,
+ inputName,
+ inputId,
+ inputValue,
+ options,
+ onChange,
+ isRequired,
+}) {
     return (
         <select
             className={customClass}
