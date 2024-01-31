@@ -3,8 +3,6 @@
     <img alt="GitHub forks" src="https://img.shields.io/github/forks/montasim/react-components?style=social">
     <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/montasim/react-components?style=social">
     <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/montasim/react-components?style=social">
-    <img src="https://wakatime.com/badge/user/bb224c90-7cb7-4c45-953e-a9e26c1cb06c/project/57a9174f-be89-46fd-b1c9-d851ff056d97.svg"/>
-    <img alt="build update badge" src="https://img.shields.io/github/actions/workflow/react-components/montasim/montasim/update-readme.yml"/>
     <img alt="language badge" src="https://img.shields.io/github/languages/count/montasim/react-components"/>
     <img alt="top language badge" src="https://img.shields.io/github/languages/top/montasim/react-components">
     <img alt="goto badge" src="https://img.shields.io/github/search/montasim/react-components/goto">
