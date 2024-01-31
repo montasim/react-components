@@ -14,6 +14,7 @@ This folder contains various designs and styles of picture components, each suit
 <BasicInputComponent
 customClass="block w-full rounded-md bg-[#2D323F] px-3 py-2.5"
 inputType="text"
+inputPlaceholder="Search Book"
 inputName="myInput"
 inputId="myInput"
 inputValue=""
