@@ -68,6 +68,8 @@ export default BasicSelectComponent;
 ```
 
 ```jsx
+const priorityOptions = ["", "Low", "Medium", "High"];
+
 <BasicSelectComponent
     className="block w-full cursor-pointer rounded-md bg-[#2D323F] px-3 py-2.5"
     selectName="priority"
