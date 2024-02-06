@@ -1,37 +1,43 @@
 import PropTypes from 'prop-types';
 
+/**
+ * Textarea provides a customizable textarea field.
+ * It supports custom styling, required field validation, and handles input changes.
+ */
 function BasicTextareaComponent({
-   customClass,
-   inputName,
-   inputId,
-   inputValue,
-   handleInputChange,
-   isInputRequired,
+  className,
+  textareaName,
+  textareaId,
+  textareaValue,
+  handleTextareaChange,
+  isTextareaRequired,
 }) {
     return (
         <textarea
-            className={customClass}
-            name={inputName}
-            id={inputId}
-            value={inputValue}
-            onChange={handleInputChange}
-            required={isInputRequired}
+            className={className} // Use className for custom styling
+            name={textareaName}
+            id={textareaId}
+            value={textareaValue}
+            onChange={handleTextareaChange}
+            required={isTextareaRequired}
         />
     );
 }
 
+// Prop validation to ensure correct usage and to catch common errors during development
 BasicTextareaComponent.propTypes = {
-    customClass: PropTypes.string,
-    inputName: PropTypes.string.isRequired,
-    inputId: PropTypes.string.isRequired,
-    inputValue: PropTypes.string.isRequired,
-    handleInputChange: PropTypes.func.isRequired,
-    isInputRequired: PropTypes.bool,
+    className: PropTypes.string,
+    textareaName: PropTypes.string.isRequired,
+    textareaId: PropTypes.string.isRequired,
+    textareaValue: PropTypes.string.isRequired,
+    handleTextareaChange: PropTypes.func.isRequired,
+    isTextareaRequired: PropTypes.bool,
 };
 
+// Default props define default values for props that are not explicitly provided
 BasicTextareaComponent.defaultProps = {
-    customClass: 'block min-h-[120px] w-full rounded-md bg-[#2D323F] px-3 py-2.5 lg:min-h-[180px]',
-    isInputRequired: true,
+    className: 'block min-h-[120px] w-full rounded-md bg-[#2D323F] px-3 py-2.5 lg:min-h-[180px]',
+    isTextareaRequired: true,
 };
 
 export default BasicTextareaComponent;

@@ -1,46 +1,53 @@
 import PropTypes from 'prop-types';
 
+/**
+ * Select renders a dropdown list with customizable selectOptions.
+ * It allows for selection to be required, and it can be styled with a custom class.
+ * The component also handles changes via a provided handleSelectChange function.
+ */
 function BasicSelectComponent({
- customClass,
- inputName,
- inputId,
- inputValue,
- options,
- onChange,
- isRequired,
+    className,
+    selectName,
+    selectId,
+    selectValue,
+    selectOptions,
+    handleSelectChange,
+    isSelectRequired,
 }) {
     return (
         <select
-            className={customClass}
-            name={inputName}
-            id={inputId}
-            value={inputValue}
-            onChange={onChange}
-            required={isRequired}
+            className={className} // Use className for custom styling
+            name={selectName}
+            id={selectId}
+            value={selectValue}
+            onChange={handleSelectChange}
+            required={isSelectRequired}
         >
             <option value="">Select Priority</option>
-            {options.map((option) => (
-                <option key={option} value={option}>
-                    {option}
+            {selectOptions.map((selectOption) => (
+                <option key={selectOption} value={selectOption}>
+                    {selectOption}
                 </option>
             ))}
         </select>
     );
 }
 
+// Prop validation to ensure correct usage and to catch common errors during development
 BasicSelectComponent.propTypes = {
-    customClass: PropTypes.string,
-    inputName: PropTypes.string.isRequired,
-    inputId: PropTypes.string.isRequired,
-    inputValue: PropTypes.string.isRequired,
-    options: PropTypes.arrayOf(PropTypes.string).isRequired,
-    onChange: PropTypes.func.isRequired,
-    isRequired: PropTypes.bool,
+    className: PropTypes.string,
+    selectName: PropTypes.string.isRequired,
+    selectId: PropTypes.string.isRequired,
+    selectValue: PropTypes.string.isRequired,
+    selectOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+    handleSelectChange: PropTypes.func.isRequired,
+    isSelectRequired: PropTypes.bool,
 };
 
+// Default props define default values for props that are not explicitly provided
 BasicSelectComponent.defaultProps = {
-    customClass: 'block w-full cursor-pointer rounded-md bg-[#2D323F] px-3 py-2.5',
-    isRequired: true,
+    className: 'block w-full cursor-pointer rounded-md bg-[#2D323F] px-3 py-2.5',
+    isSelectRequired: true,
 };
 
 export default BasicSelectComponent;

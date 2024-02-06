@@ -1,18 +1,23 @@
 import PropTypes from 'prop-types';
 
+/**
+ * BasicInputComponent renders an input field with configurable properties.
+ * It supports various input types and requires essential attributes like name and id
+ * to be specified. Change handlers and required state can also be configured.
+ */
 function BasicInputComponent({
-     customClass,
-     inputType,
-     inputPlaceholder,
-     inputName,
-     inputId,
-     inputValue,
-     handleInputChange,
-     isInputRequired,
- }) {
+ className,
+ inputType,
+ inputPlaceholder,
+ inputName,
+ inputId,
+ inputValue,
+ handleInputChange,
+ isInputRequired,
+}) {
     return (
         <input
-            className={customClass}
+            className={className}
             type={inputType}
             placeholder={inputPlaceholder}
             name={inputName}
@@ -24,9 +29,10 @@ function BasicInputComponent({
     );
 }
 
+// Prop validation to ensure correct usage and to catch common errors during development
 BasicInputComponent.propTypes = {
-    customClass: PropTypes.string,
-    inputType: PropTypes.oneOf(['text', 'password', 'email', 'number', 'search']), // Adjust the allowed input types as needed
+    className: PropTypes.string,
+    inputType: PropTypes.oneOf(['text', 'password', 'email', 'number', 'search']), // Restricts to specific input types
     inputPlaceholder: PropTypes.string,
     inputName: PropTypes.string.isRequired,
     inputId: PropTypes.string.isRequired,
@@ -35,8 +41,9 @@ BasicInputComponent.propTypes = {
     isInputRequired: PropTypes.bool,
 };
 
+// Default props define default values for props that are not explicitly provided
 BasicInputComponent.defaultProps = {
-    customClass: 'block w-full rounded-md bg-[#2D323F] px-3 py-2.5',
+    className: 'block w-full rounded-md bg-[#2D323F] px-3 py-2.5',
     inputType: 'text',
     isInputRequired: false,
 };
