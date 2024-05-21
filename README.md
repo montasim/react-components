@@ -40,6 +40,7 @@ Welcome to the Component Library, a collection of reusable UI components designe
     - [Image Components](./img/img.md)
     - [Picture Components](./picture/picture.md)
     - [Notification Components](./notification/notification.md)
+    - [Loading Components](./loading/loading.md)
 - [Contributing](#contributing)
 - [License](#license)
 
