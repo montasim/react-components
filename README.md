@@ -74,7 +74,8 @@ Information on how others can contribute to this library.
 
 ## License
 
-State the license under which this library is available. For example, MIT, GPL, etc.
+[MIT](LICENSE)
+
 
 <br/>
 <br/>
